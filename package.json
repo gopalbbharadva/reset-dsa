@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/checkArraySorted.js",
+  "main": "arrays/secondLargestElement.js",
   "scripts": {
-    "start":"nodemon arrays/checkArraySorted.js",
+    "start":"nodemon arrays/secondLargestElement.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
