@@ -1,0 +1,15 @@
+{
+  "name": "reset-dsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arrays/largestElement.js",
+  "scripts": {
+    "start":"nodemon arrays/largestElement.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
