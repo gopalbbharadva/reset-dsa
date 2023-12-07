@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/leftRotateArray.js",
+  "main": "arrays/Easy/findMaxConsecutiveOnes.js",
   "scripts": {
-    "start":"nodemon arrays/leftRotateArray.js",
+    "start":"nodemon arrays/Easy/findMaxConsecutiveOnes.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
