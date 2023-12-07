@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/secondLargestElement.js",
+  "main": "arrays/leftRotateArray.js",
   "scripts": {
-    "start":"nodemon arrays/secondLargestElement.js",
+    "start":"nodemon arrays/leftRotateArray.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
