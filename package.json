@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/Easy/rotateArrayToLeftByKplaces.js",
+  "main": "arrays/Easy/removeDuplicateNumbersFromSortedArray.js",
   "scripts": {
-    "start":"nodemon arrays/Easy/rotateArrayToLeftByKplaces.js",
+    "start":"nodemon arrays/Easy/removeDuplicateNumbersFromSortedArray.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
