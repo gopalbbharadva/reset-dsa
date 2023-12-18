@@ -4,7 +4,7 @@
   "description": "",
   "main": "arrays/Easy/findNumberAppearOnce.js",
   "scripts": {
-    "start":"nodemon arrays/Easy/findNumberAppearOnce.js",
+    "start":"nodemon arrays/slots.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
