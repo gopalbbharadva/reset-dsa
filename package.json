@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/Easy/findNumberAppearOnce.js",
+  "main": "arrays/Easy/unionOfTwoArrays.js",
   "scripts": {
-    "start":"nodemon arrays/slots.js",
+    "start":"nodemon arrays/Easy/unionOfTwoArrays.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
