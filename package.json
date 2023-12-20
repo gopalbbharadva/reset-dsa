@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/Easy/unionOfTwoArrays.js",
+  "main": "arrays/Easy/twoSum.js",
   "scripts": {
-    "start":"nodemon arrays/Easy/unionOfTwoArrays.js",
+    "start":"nodemon arrays/Easy/twoSum.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
