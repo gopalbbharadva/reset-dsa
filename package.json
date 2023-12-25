@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/Easy/findMissingNumberInAnArray.js",
+  "main": "arrays/Easy/sortArrayOfZerosOnesAndTwos.js",
   "scripts": {
-    "start":"nodemon arrays/Easy/findMissingNumberInAnArray.js",
+    "start":"nodemon arrays/Easy/sortArrayOfZerosOnesAndTwos.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
