@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/Easy/sortArrayOfZerosOnesAndTwos.js",
+  "main": "arrays/Medium/elementOccursMoreThanHalfOfSize.js",
   "scripts": {
-    "start":"nodemon arrays/Easy/sortArrayOfZerosOnesAndTwos.js",
+    "start":"nodemon arrays/Medium/elementOccursMoreThanHalfOfSize.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
