@@ -60,8 +60,6 @@ const findMaximumSubArrayWithOptimalApproach = (arr) => {
       temp = 0
     }
   }
-  console.log(start, 'start')
-  console.log(end, 'end')
   return sum
 }
 findMaximumSubArrayWithOptimalApproach([-2, 1, -3, 4, -1, 2, 1, -5, 4])

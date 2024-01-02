@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/Medium/maximumSubArray.js",
+  "main": "arrays/Medium/buyAndSellStock.js",
   "scripts": {
-    "start":"nodemon arrays/Medium/maximumSubArray.js",
+    "start":"nodemon arrays/Medium/buyAndSellStock.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
