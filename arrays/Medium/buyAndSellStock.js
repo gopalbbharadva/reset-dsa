@@ -18,28 +18,50 @@
 // buyAndSellStock([7, 1, 5, 3, 6, 4])
 
 // Better approach
-const buyAndSellStockBetterApproach = (arr) => {
-  let minElementIndex = arr[0]
-  let minElement = arr[0]
+// const buyAndSellStockBetterApproach = (arr) => {
+//   let minElementIndex = 0
+//   let minElement = arr[0]
 
-  let maxElementIndex = 0
-  let maxElement = 0
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < minElement) {
-      minElement = arr[i]
-      minElementIndex = i
+//   let maxElementIndex = 0
+//   let maxElement = 0
+//   if (arr.length === 1) return 0
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < minElement) {
+//       minElement = arr[i]
+//       minElementIndex = i
+//     }
+//   }
+
+//   for (let j = minElementIndex; j < arr.length; j++) {
+//     if (arr[j] > maxElement) {
+//       maxElement = arr[j]
+//       maxElementIndex = j
+//     }
+//   }
+
+//   return maxElement - minElement
+// }
+// console.log(buyAndSellStockBetterApproach([7, 1, 5, 3, 6, 4]))
+// console.log(buyAndSellStockBetterApproach([2, 4, 1]))
+
+// Optimal approach with single traversal
+const buyAndSellStockOptimal = (arr) => {
+  let leftPointer = 0
+  let rightPointer = 1
+  let profit = 0
+  while (rightPointer < arr.length) {
+    if (arr[leftPointer] >= arr[rightPointer]) {
+      leftPointer = rightPointer
+      rightPointer++
+    } else {
+      const temp = arr[rightPointer] - arr[leftPointer]
+      rightPointer++
+      if (temp > profit) {
+        profit = temp
+      }
     }
   }
-
-  for (let j = minElementIndex; j < arr.length; j++) {
-    if (arr[j] > maxElement) {
-      maxElement = arr[j]
-      maxElementIndex = j
-    }
-  }
-
-  return maxElement - minElement
+  return profit
 }
 
-console.log(buyAndSellStockBetterApproach([7, 1, 5, 3, 6, 4]))
-// console.log(buyAndSellStockBetterApproach([7, 6, 4, 3, 1]))
+buyAndSellStockOptimal([1, 2, 4, 2, 5, 7, 2, 4, 9, 0, 9])
