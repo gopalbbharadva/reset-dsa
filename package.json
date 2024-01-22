@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "arrays/Medium/buyAndSellStock.js",
+  "main": "BasicMaths/CountDigits.js",
   "scripts": {
-    "start":"nodemon arrays/Medium/buyAndSellStock.js",
+    "start":"nodemon BasicMaths/CountDigits.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
