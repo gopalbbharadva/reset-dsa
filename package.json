@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "BasicMaths/palindrome.js",
+  "main": "BasicMaths/gcd.js",
   "scripts": {
-    "start":"nodemon BasicMaths/palindrome.js",
+    "start":"nodemon BasicMaths/gcd.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
