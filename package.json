@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "BasicMaths/reverseNumber.js",
+  "main": "BasicMaths/palindrome.js",
   "scripts": {
-    "start":"nodemon BasicMaths/reverseNumber.js",
+    "start":"nodemon BasicMaths/palindrome.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
