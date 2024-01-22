@@ -2,9 +2,9 @@
   "name": "reset-dsa",
   "version": "1.0.0",
   "description": "",
-  "main": "BasicMaths/CountDigits.js",
+  "main": "BasicMaths/reverseNumber.js",
   "scripts": {
-    "start":"nodemon BasicMaths/CountDigits.js",
+    "start":"nodemon BasicMaths/reverseNumber.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
