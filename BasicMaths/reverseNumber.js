@@ -4,6 +4,10 @@
 // Output: 321
 // Explanation: The reverse of 123 is 321
 
+// Constraints:
+
+// -231 <= x <= 231 - 1
+
 const reverseNumber = (n) => {
   let temp = 0
   const max = Math.pow(2, 31) - 1
