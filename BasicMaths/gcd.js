@@ -40,7 +40,6 @@ const findGCDWithOptimalApproach = (n1, n2) => {
 // console.log(findGCDWithOptimalApproach(5, 10), '***')
 
 const findGCDWithRecursion = (n1, n2) => {
-  // let
   if (n1 === 0 || n2 === 0) {
     return n1
   } else {
@@ -53,5 +52,3 @@ const findGCDWithRecursion = (n1, n2) => {
 }
 
 console.log(findGCDWithRecursion(22, 33))
-
-// console.log(findGCD(4, 8), 'res')
