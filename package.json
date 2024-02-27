@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "BasicMaths/gcd.js",
+  "main": "BinarySearch/SearchElement.js",
   "scripts": {
-    "start": "nodemon BasicMaths/gcd.js",
+    "start": "nodemon BinarySearch/SearchElement.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
