@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "BinarySearch/UpperBound.js",
+  "main": "BinarySearch/InsertAnElement.js",
   "scripts": {
-    "start": "nodemon BinarySearch/UpperBound.js",
+    "start": "nodemon BinarySearch/InsertAnElement.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
