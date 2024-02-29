@@ -5,14 +5,13 @@
 const binarySearch = (arr, low, high, t) => {
   console.log(low, 'low')
   console.log(high, 'high')
+  let count = 0
   if (low > high) return -1
 
   const md = Math.floor((high + low) / 2)
   if (t === arr[md]) {
-    console.log('first')
-    return arr[md]
+    return md
   }
-
   // target is greater than the mid element
   else if (t > arr[md]) {
     return binarySearch(arr, md + 1, high, t)
@@ -28,4 +27,4 @@ const searchUsingBinary = (arr, target) => {
   const result = binarySearch(arr, 0, arr.length - 1, target)
   console.log(result, 'result')
 }
-searchUsingBinary([-1, 0, 3, 5, 9, 12], 0)
+searchUsingBinary([-1, 0, 3, 5, 9, 9, 12], 9)
