@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "BinarySearch/Ceil.js",
+  "main": "BinarySearch/FindFirstAndLastOcc.js",
   "scripts": {
-    "start": "nodemon BinarySearch/Ceil.js",
+    "start": "nodemon BinarySearch/FindFirstAndLastOcc.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

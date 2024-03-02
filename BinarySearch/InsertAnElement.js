@@ -20,4 +20,4 @@ const insertElementIndex = (arr, t) => {
   console.log(result, 'result')
 }
 
-insertElementIndex([1, 2, 4, 5, 7, 9], 8)
+insertElementIndex([1, 2, 4, 7], 6)
