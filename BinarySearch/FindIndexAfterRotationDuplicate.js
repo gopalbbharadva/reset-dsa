@@ -24,45 +24,37 @@ const checkArraySorted = (arr, low, high) => {
 }
 
 const binarySearch = (arr, low, high, t) => {
-  console.log(low, 'low ele')
-  console.log(high, 'high ele')
   if (low > high) return false
   const mid = Math.floor((low + high) / 2)
-  console.log(mid, 'mid ele')
   if (arr[mid] === t) return true
+
+  // By this condition we are compressing the array .
+  // if our mid, high and low are same then we are just decrementing it to find the sorted half of the array
+  //
   if (arr[low] === arr[mid] && arr[mid] === arr[high]) {
     return binarySearch(arr, low + 1, high - 1, t)
   }
   //   Left part is sorted
   else if (arr[low] <= arr[mid]) {
-    console.log('else if******')
     if (arr[low] <= t && t <= arr[mid]) {
       return binarySearch(arr, low, mid - 1, t)
     } else {
-      console.log('else ')
       return binarySearch(arr, mid + 1, high, t)
     }
   }
   //   Right part is sorted
   else {
-    console.log('else*******************')
     if (arr[mid] <= t && t <= arr[high]) {
-      console.log('right if')
       return binarySearch(arr, mid + 1, high, t)
     } else {
-      console.log('right else')
-      //   console.log(mid,'mid(')
       return binarySearch(arr, low, mid - 1, t)
     }
   }
-  //   console.log(arr[low],'low ele')
-  //   console.log(arr[mid],'mid ele')
-  //   console.log(arr[high],'high ele')
 }
 
 const findIndexAfterRotationWithDuplicateElements = (arr, t) => {
   const res = binarySearch(arr, 0, arr.length - 1, t)
-  console.log(res, 'res')
+  return res
 }
 // findIndexAfterRotationWithDuplicateElements([4, 1, 2, 3, 4], 0)
 // findIndexAfterRotationWithDuplicateElements([1, 0, 1, 1, 1], 1)
