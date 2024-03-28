@@ -222,39 +222,98 @@
 
 // Problem 9 : Search Element in Rotated Sorted Array II
 
-const findElementWithDuplicateValues = (arr, t) => {
+// const findElementWithDuplicateValues = (arr, t) => {
+//   let high = arr.length - 1,
+//     low = 0,
+//     mid = -1
+//   ans = -1
+//   while (low <= high) {
+//     // console.log('loop')
+//     mid = Math.floor((high + low) / 2)
+//     // console.log(mid, 'mid')
+//     // console.log(arr[mid], 'mid value')
+//     if (arr[mid] === t) return true
+//     if (arr[mid] === arr[low] && arr[mid] === arr[high]) {
+//       low += 1
+//       high -= 1
+//     } else if (arr[low] <= arr[mid]) {
+//       // console.log('arr left part sorted')
+//       if (arr[low] <= t && arr[mid] >= t) {
+//         high = mid - 1
+//       } else {
+//         low = mid + 1
+//       }
+//     } else {
+//       console.log('right part is sorted')
+//       if (arr[mid] <= t && arr[high] >= t) {
+//         // console.log('right')
+//         low = mid + 1
+//       } else {
+//         // console.log('left')
+//         high = mid - 1
+//       }
+//     }
+//   }
+//   return false
+// }
+
+// console.log(findElementWithDuplicateValues([5, 6, 1, 2, 3, 3, 3, 4], 30), 'res')
+
+// Problem 10 :
+// const findMinimumInSortedArray = (arr) => {
+//   let high = arr.length - 1,
+//     low = 0,
+//     mid = -1
+//   ans = 0
+//   while (low <= high) {
+//     // console.log('loop')
+//     mid = Math.floor((high + low) / 2)
+//     // console.log(mid, 'mid')
+//     // Left part is sorted
+//     if (arr[low] <= arr[mid]) {
+//       // console.log('if')
+//       // if our low index value is less than current minimum value then we will update ans
+//       if (arr[low] <= ans) {
+//         ans = arr[low]
+//       }
+//       low = mid + 1
+//     } else {
+//       console.log('else')
+//       if (arr[mid] <= ans) {
+//         ans = arr[mid]
+//       }
+//       high = mid - 1
+//     }
+//   }
+//   return ans
+// }
+
+// console.log(findMinimumInSortedArray([4, 5, 0, 1, 2, 3]), 'res')
+
+// Problem 11 :  Single Element in a Sorted Array
+
+const singleElement = (arr) => {
   let high = arr.length - 1,
     low = 0,
     mid = -1
-  ans = -1
   while (low <= high) {
-    // console.log('loop')
     mid = Math.floor((high + low) / 2)
-    // console.log(mid, 'mid')
-    // console.log(arr[mid], 'mid value')
-    if (arr[mid] === t) return true
-    if (arr[mid] === arr[low] && arr[mid] === arr[high]) {
-      low += 1
-      high -= 1
-    } else if (arr[low] <= arr[mid]) {
-      // console.log('arr left part sorted')
-      if (arr[low] <= t && arr[mid] >= t) {
-        high = mid - 1
-      } else {
-        low = mid + 1
-      }
+    if (arr[mid] !== arr[mid - 1] && arr[mid] !== arr[mid + 1]) {
+      console.log('if')
+      return arr[mid]
+    }
+    // mid is at even index then single elem is in the left half
+    else if (
+      (mid % 2 === 0 && arr[mid] !== arr[mid + 1]) ||
+      (mid % 2 !== 0 && arr[mid] === arr[mid + 1])
+    ) {
+      console.log('else if')
+      high = mid - 1
     } else {
-      console.log('right part is sorted')
-      if (arr[mid] <= t && arr[high] >= t) {
-        // console.log('right')
-        low = mid + 1
-      } else {
-        // console.log('left')
-        high = mid - 1
-      }
+      console.log('else')
+      low = mid + 1
     }
   }
-  return false
 }
 
-console.log(findElementWithDuplicateValues([5, 6, 1, 2, 3, 3, 3, 4], 30), 'res')
+console.log(singleElement([1, 1, 2, 3, 3, 4, 4]), 'res')
