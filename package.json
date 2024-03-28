@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "BinarySearch/PeakElement.js",
+  "main": "practice.js",
   "scripts": {
-    "start": "nodemon BinarySearch/PeakElement.js",
+    "start": "nodemon practice.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
