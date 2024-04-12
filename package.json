@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "strings/reverseString.js",
+  "main": "JsProblemSolving/sleep.js",
   "scripts": {
-    "start": "nodemon strings/reverseString.js",
+    "start": "nodemon JsProblemSolving/sleep.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
