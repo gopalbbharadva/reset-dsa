@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "JsProblemSolving/sleep.js",
+  "main": "linkedlist/.js",
   "scripts": {
-    "start": "nodemon JsProblemSolving/sleep.js",
+    "start": "nodemon linkedlist/basicLinkedList.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -292,28 +292,147 @@
 
 // Problem 11 :  Single Element in a Sorted Array
 
-const singleElement = (arr) => {
-  let high = arr.length - 1,
-    low = 0,
-    mid = -1
-  while (low <= high) {
-    mid = Math.floor((high + low) / 2)
-    if (arr[mid] !== arr[mid - 1] && arr[mid] !== arr[mid + 1]) {
-      console.log('if')
-      return arr[mid]
-    }
-    // mid is at even index then single elem is in the left half
-    else if (
-      (mid % 2 === 0 && arr[mid] !== arr[mid + 1]) ||
-      (mid % 2 !== 0 && arr[mid] === arr[mid + 1])
-    ) {
-      console.log('else if')
-      high = mid - 1
+// const singleElement = (arr) => {
+//   let high = arr.length - 1,
+//     low = 0,
+//     mid = -1
+//   while (low <= high) {
+//     mid = Math.floor((high + low) / 2)
+//     if (arr[mid] !== arr[mid - 1] && arr[mid] !== arr[mid + 1]) {
+//       console.log('if')
+//       return arr[mid]
+//     }
+//     // mid is at even index then single elem is in the left half
+//     else if (
+//       (mid % 2 === 0 && arr[mid] !== arr[mid + 1]) ||
+//       (mid % 2 !== 0 && arr[mid] === arr[mid + 1])
+//     ) {
+//       console.log('else if')
+//       high = mid - 1
+//     } else {
+//       console.log('else')
+//       low = mid + 1
+//     }
+//   }
+// }
+
+// console.log(singleElement([1, 1, 2, 3, 3, 4, 4]), 'res')
+
+// Problem 12 : buy and sell stock
+
+// const buyAndSellStock = (arr) => {
+//   let profit = -Infinity
+//   let min = Infinity
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//       min = arr[i]
+//     }
+//     if (arr[i] - min > profit) {
+//       profit = arr[i] - min
+//     }
+//   }
+//   return profit
+// }
+
+// console.log(buyAndSellStock([9, 8, 1]), 'res')
+
+// Problem 13: two sum problem
+
+// const twoSumProblem = (arr, t) => {
+//   const map = new Map()
+//   for (let i = 0; i < arr.length; i++) {
+//     const temp = t - arr[i]
+//     if (map.has(temp)) {
+//       return [map.get(temp), i]
+//     } else {
+//       map.set(arr[i], i)
+//     }
+//   }
+//   return [-1, -1]
+// }
+
+// console.log(twoSumProblem([2, 6, 5, 8, 13], 14))
+
+// const twoSum = (arr, t) => {
+//   let lp = 0,
+//     rp = arr.length - 1
+//   while (lp < rp) {
+//     const temp = arr[lp] + arr[rp]
+//     if (temp < t) {
+//       lp++
+//     } else if (temp > t) {
+//       rp--
+//     } else {
+//       return [lp, rp]
+//     }
+//   }
+//   return [-1, -1]
+// }
+
+// console.log(
+//   twoSum(
+//     [1, 2, 3, 4, 5].sort((a, b) => a - b),
+//     7
+//   ),
+//   'res'
+// )
+
+// const findMajorityElement = (arr) => {
+//   let element = 0,
+//     count = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     if (count === 0 && element !== arr[i]) {
+//       element = arr[i]
+//     }
+//     if (element === arr[i]) {
+//       count++
+//     } else {
+//       count--
+//     }
+//   }
+//   let anotherCount = 0
+//   // for (let i = 0; i < arr.length; i++) {
+//   //   if(arr[i]=== )
+//   // }
+//   console.log(count, 'count')
+//   console.log(element)
+// }
+
+// findMajorityElement([2, 2, 1, 1, 1, 3, 3])
+
+function majorityElement(arr) {
+  // Size of the given array
+  let n = arr.length
+  let cnt = 0 // Count
+  let el // Element
+
+  // Applying the algorithm
+  for (let i = 0; i < n; i++) {
+    if (cnt === 0) {
+      cnt = 1
+      el = arr[i]
+    } else if (el === arr[i]) {
+      cnt++
     } else {
-      console.log('else')
-      low = mid + 1
+      cnt--
     }
   }
+  console.log(cnt, 'cnt')
+
+  // Checking if the stored element is the majority element
+  let cnt1 = 0
+  for (let i = 0; i < n; i++) {
+    if (arr[i] === el) {
+      cnt1++
+    }
+  }
+
+  if (cnt1 > Math.floor(n / 2)) {
+    return el
+  }
+  return -1
 }
 
-console.log(singleElement([1, 1, 2, 3, 3, 4, 4]), 'res')
+let arr = [2, 2, 1, 1, 1, 1, 3]
+let ans = majorityElement(arr)
+console.log('The majority element is:', ans)
