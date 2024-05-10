@@ -50,44 +50,99 @@ const insertAtBeginning = (value) => {
 
 const insertAtEnd = (value) => {
   let temp = head
+  console.log(head, 'head')
+  if (!head) {
+    head = new Node(99)
+    return
+  }
+
   const newNode = new Node(value)
   while (temp.next) {
+    console.log(temp, 'temp')
     temp = temp.next
   }
   tail.next = newNode
   tail = newNode
-  console.log(tail, 'tail')
+  //   console.log(tail, 'tail')
 }
 
+// Case 1 : if position is zero or list is empty then insert it at start
+//
 const insertAtPositionInLinkedList = (value, position) => {
   let count = 1,
     temp = head
-  const newNode = new Node(value)
+  let newNode = new Node(value)
+  //  Case 1
+  if (position === 1 || head === null) {
+    newNode.next = head
+    head = newNode
+    return
+  }
+  // Go just before the position
   while (temp && count !== position - 1) {
-    // console.log('first')
     count++
     temp = temp.next
   }
-  console.log(temp, 'temp')
+  // link new node with the node that is after the current positioned node
   newNode.next = temp.next
+  // temp node(current node) with the new node
   temp.next = newNode
 }
 
-insertAtBeginning(56)
-insertAtEnd(33)
-insertAtEnd(330)
+// Deleting from beginning
+const deleteFromBeginning = () => {
+  let temp = head
+  // If list is empty then just return
+  if (head === null) return
+  head = head.next
+  temp.next = null
+}
+
+// Deleting from the end
+const deleteFromEnd = () => {
+  let temp = head
+  // If list is empty then just return
+  if (head === null) return
+  while (temp.next.next) {
+    temp = temp.next
+  }
+  temp.next = null
+}
+
+// Scenario 1 : check for list is empty
+// Scenario 2 : if position is 0 then remove first element
+// Scenario 3 : if position is last element then remove last element
+const deleteFromPosition = (position) => {
+  let current = head,
+    prev = null
+  //   Scenario 1
+  if (head === null) return
+  //   Scenario 2
+  if (position === 0) {
+    let temp = head
+    head = head.next
+    temp = null
+    return
+  }
+
+  // Setting the positions
+  // 1. set current at the position which is given
+  // 2. set prev at the previous position which is given.
+  for (let i = 0; i < position && current.next !== null; ++i) {
+    prev = current
+    current = current.next
+  }
+  prev.next = current.next
+  current = null
+}
+
+// insertAtBeginning(56)
+// insertAtEnd(33)
+console.log(head, 'head')
+// insertAtEnd(330)
 insertAtPositionInLinkedList(69, 3)
+// deleteFromBeginning()
+console.log('**********')
+deleteFromPosition(0)
+// deleteFromEnd()
 traverseLinkedList()
-
-// console.log(findLengthOfLinkedList(), 'length')
-
-// console.log(searchFromLinkedList(489), 'result')
-
-// const createNode = (data) => {
-//   const n2 = new Node(data)
-//   return n2
-// }
-
-// console.log(n1, 'n1')
-// console.log(createNode(45))
-// console.log(head, 'head')
