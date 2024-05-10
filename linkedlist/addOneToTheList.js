@@ -18,6 +18,10 @@ n1.next = n2
 n2.next = n3
 // n3.next = n4
 // n4.next = n5
+
+// Brute force approach
+// TC= O(3n)
+// SC=O(1)
 const reversedLinkedList = (head) => {
   let prev = null,
     temp = head,
@@ -56,4 +60,42 @@ const addOneToTheList = () => {
   return head
 }
 
-console.log(addOneToTheList())
+// Recursion
+const helper = (head) => {
+  let temp = head
+  //  Base condition which will go to the last node and return 1.
+  if (temp === null) {
+    return 1
+  }
+  // will update temp.data by adding carry
+  else {
+    let carry = helper(temp.next)
+    temp.data = temp.data + carry
+    // if temp.data is under 10 after adding carry
+    if (temp.data < 10) {
+      return 0
+    }
+    // if temp.data is greater than or equal to 10 after adding carry
+    // then return carry 1
+    else {
+      temp.data = 0
+      return 1
+    }
+  }
+}
+
+const addOneToTheListUsingRecursion = () => {
+  const carry = helper(head)
+  //   if carry is 1 ,then we will create new node and append it at the start
+  if (carry) {
+    const newNode = new Node(carry)
+    newNode.next = head
+    return newNode
+  }
+  // otherwise will just return the head
+  return head
+}
+
+console.log(addOneToTheListUsingRecursion(), '')
+
+// console.log(addOneToTheList())
