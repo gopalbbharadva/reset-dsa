@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "linkedlist/findMiddleElement.js",
+  "main": "linkedlist/reverseLinkedlist.js",
   "scripts": {
-    "start": "nodemon linkedlist/findMiddleElement.js",
+    "start": "nodemon linkedlist/reverseLinkedlist.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
