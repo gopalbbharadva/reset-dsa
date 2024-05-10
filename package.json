@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "linkedlist/palindrome.js",
+  "main": "linkedlist/addOneToTheList.js",
   "scripts": {
-    "start": "nodemon linkedlist/palindrome.js",
+    "start": "nodemon linkedlist/addOneToTheList.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
