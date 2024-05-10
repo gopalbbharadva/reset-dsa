@@ -18,6 +18,34 @@ n2.next = n3
 n3.next = n4
 n4.next = n5
 
+// Optimal approach
+// TC = O(length) as eventually we are traversing fast from start to end once
+const removeNthElementOptimalApproach = (n) => {
+  let fast = head,
+    slow = head
+  for (let i = 0; i < n; i++) {
+    fast = fast.next
+    if (fast === null) {
+      const newHead = head.next
+      console.log(newHead.data + ' is deleted')
+      return newHead
+    }
+  }
+  //   console.log(fast, 'sd')
+  while (fast.next) {
+    fast = fast.next
+    slow = slow.next
+  }
+  const delNode = slow.next
+  slow.next = slow.next.next
+  console.log(delNode.data + ' is deleted')
+  return head
+}
+
+console.log(removeNthElementOptimalApproach(3), 'head')
+
+// Brute force approach
+// TC = O(length) + O(length-n)
 const removeNThElement = (n) => {
   let temp = head,
     current = head
@@ -44,4 +72,4 @@ const removeNThElement = (n) => {
   return head
 }
 
-console.log(removeNThElement(3))
+// console.log(removeNThElement(3))
