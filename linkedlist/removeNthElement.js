@@ -4,6 +4,7 @@ class Node {
     this.next = null
   }
 }
+
 let head = null
 
 const n1 = new Node(3)
