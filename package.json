@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "linkedlist/designBrowserHistory.js",
+  "main": "trees/depthFirstSearchTraversal.js",
   "scripts": {
-    "start": "nodemon linkedlist/designBrowserHistory.js",
+    "start": "nodemon trees/depthFirstSearchTraversal.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
