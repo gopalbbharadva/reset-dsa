@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "trees/depthFirstSearchTraversal.js",
+  "main": "trees/preOrderTraversalUsingStack.js",
   "scripts": {
-    "start": "nodemon trees/depthFirstSearchTraversal.js",
+    "start": "nodemon trees/preOrderTraversalUsingStack.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
