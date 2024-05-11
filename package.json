@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "trees/heightOfTheTree.js",
+  "main": "trees/pathToSum.js",
   "scripts": {
-    "start": "nodemon trees/heightOfTheTree.js",
+    "start": "nodemon trees/pathToSum.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
