@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "linkedlist/hard/flattenLinkedList.js",
+  "main": "linkedlist/hard/cloneWithRandomPointer.js",
   "scripts": {
-    "start": "nodemon linkedlist/hard/flattenLinkedList.js",
+    "start": "nodemon linkedlist/hard/cloneWithRandomPointer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
