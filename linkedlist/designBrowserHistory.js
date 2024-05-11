@@ -47,6 +47,13 @@ class Browser {
   }
 }
 
+// const b1 = new Browser('google.com')
+// console.log(b1, 'b1')
+
+var obj = new BrowserHistory(homepage)
+obj.visit(url)
+var param_2 = obj.back(steps)
+var param_3 = obj.forward(steps)
 /**
  * Your BrowserHistory object will be instantiated and called as such:
  * var obj = new BrowserHistory(homepage)
