@@ -28,3 +28,20 @@
 // const res = reverseNumber(10000)
 
 // *************
+//3. Problem Statement: Given an integer N, return true if it is a palindrome else return false.
+
+// const isNumberPalindrome = (num) => {
+//   let temp = num
+//   let newNum = 0
+//   while (temp > 0) {
+//     const t = temp % 10
+//     newNum = newNum * 10 + t
+//     temp = Math.round(temp / 10)
+//   }
+//   if (newNum === num) {
+//     return "it's a palindrome number"
+//   }
+//   return 'Not a palindrome numebr'
+// }
+
+// const res = isNumberPalindrome(343)
