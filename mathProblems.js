@@ -86,3 +86,21 @@
 
 // const res = findGcdBetterApproach(5, 15)
 // console.log(res, 'res')
+
+// !! Optimal approach
+// && Explanation
+/**
+ * It's euclidian algoritham, where when we subtract 
+ * smaller value from larger value then
+ */
+
+// const findGcd = (n1, n2) => {
+//   const min = Math.min(n1, n2)
+//   const max = Math.max(n1, n2)
+//   if (min === 0) {
+//     return max
+//   } else {
+//     return findGcd(max - min, min)
+//   }
+// }
+// const res = findGcd(10, 2)
