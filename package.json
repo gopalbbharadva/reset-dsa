@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "practice2.js",
+  "main": "mathProblems.js",
   "scripts": {
-    "start": "nodemon practice2.js",
+    "start": "nodemon mathProblems.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
