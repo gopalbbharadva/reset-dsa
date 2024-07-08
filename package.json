@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "trees/bst/createBstFromInorder.js",
+  "main": "practice2.js",
   "scripts": {
-    "start": "nodemon trees/bst/createBstFromInorder.js",
+    "start": "nodemon practice2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
