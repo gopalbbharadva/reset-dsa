@@ -126,3 +126,35 @@
 
 // const temp = armstrogNumber(153)
 // console.log(temp, 'temp')
+
+// *************
+//6. Problem Statement: Given an integer N, return all divisors of N.
+
+// Brute-force approach
+// const printDivisor = (num) => {
+//   let arr = []
+//   for (let i = 1; i <= num; i++) {
+//     if (num % i === 0) {
+//       arr.push(i)
+//     }
+//   }
+//   return arr
+// }
+// const res = printDivisor(36)
+// console.log(res, 'res')
+
+// Better Approach
+// const printDivisorBetter = (num) => {
+//   let arr = []
+//   for (let i = 1; i <= num / 2; i++) {
+//     if (num % i === 0) {
+//       arr.push(i)
+//     }
+//   }
+//   arr.push(num)
+//   return arr
+// }
+// const res = printDivisorBetter(36)
+// console.log(res, 'res')
+
+//
