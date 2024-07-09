@@ -49,3 +49,16 @@
 
 // const res = sumOfNNumbers(5)
 // console.log(res, 'res')
+
+// !! 5. Factorial of N numbers
+
+// const factorial = (num) => {
+//   if (num === 1) {
+//     return 1
+//   } else {
+//     return num * factorial(num - 1)
+//   }
+// }
+
+// const res = factorial(5)
+// console.log(res, 'res')
