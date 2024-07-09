@@ -157,4 +157,20 @@
 // const res = printDivisorBetter(36)
 // console.log(res, 'res')
 
-//
+// *************
+//7. Problem Statement: Given an integer N, check whether it is prime or not.
+// A prime number is a number that is only divisible by 1 and itself and the total number of divisors is 2.
+
+// const checkPrimeNumber = (num) => {
+//   let cnt = 0
+//   for (let i = 1; i <= num; i++) {
+//     if (num % i === 0) {
+//       cnt++
+//     }
+//   }
+//   if (cnt === 2) return true
+//   return false
+// }
+
+// const res = checkPrimeNumber(4)
+// console.log(res, 'res')
