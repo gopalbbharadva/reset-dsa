@@ -90,7 +90,7 @@
 // !! Optimal approach
 // && Explanation
 /**
- * It's euclidian algoritham, where when we subtract 
+ * It's euclidian algoritham, where when we subtract
  * smaller value from larger value then
  */
 
@@ -104,3 +104,25 @@
 //   }
 // }
 // const res = findGcd(10, 2)
+
+// *************
+//5. Problem Statement: Given an integer N,
+// return true it is an Armstrong number otherwise return false.
+
+// const armstrogNumber = (num) => {
+//   let temp = num
+//   let sum = 0
+//   while (temp > 0) {
+//     const t = temp % 10
+//     sum += t * t * t
+//     console.log(sum, 'sum')
+//     temp = Math.floor(temp / 10)
+//   }
+//   if (num === sum) {
+//     return 'Armstrong number'
+//   }
+//   return 'Not armstrong number'
+// }
+
+// const temp = armstrogNumber(153)
+// console.log(temp, 'temp')
