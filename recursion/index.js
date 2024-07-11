@@ -62,3 +62,49 @@
 
 // const res = factorial(5)
 // console.log(res, 'res')
+
+// !! 6. Reverse an array using recursion
+
+// Two pointer approach
+// const reverseArr = (arr) => {
+//   let lp = 0,
+//     rp = arr.length - 1
+//   while (lp < rp) {
+//     ;[arr[lp], arr[rp]] = [arr[rp], arr[lp]]
+//     lp++
+//     rp--
+//   }
+//   console.log(arr, 'arr')
+// }
+
+// reverseArr([1, 2, 3, 4, 5])
+
+// Using recursion
+// &1 const reverseRecursion = (arr, count, arr2) => {
+//   if (count === arr.length - 1) {
+//     return count
+//   } else {
+//     reverseRecursion(arr, ++count, arr2)
+//     arr2.push(arr[count])
+//   }
+//   return arr2
+// }
+
+// const res = reverseRecursion([1, 2, 3, 4, 5], -1, [])
+// console.log(res, 'res')
+
+// &2 
+const reverseAnArrUsingRecursion = (arr, start, end) => {
+  if (start > end) {
+    return
+  } else {
+    const temp = arr[start]
+    arr[start] = arr[end]
+    arr[end] = temp
+    reverseAnArrUsingRecursion(arr, ++start, --end)
+  }
+  console.log(arr, 'arr')
+}
+
+const arr = [1, 2, 3, 4, 5]
+reverseAnArrUsingRecursion(arr, 0, arr.length - 1)
