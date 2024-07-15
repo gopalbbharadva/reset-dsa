@@ -93,7 +93,7 @@
 // const res = reverseRecursion([1, 2, 3, 4, 5], -1, [])
 // console.log(res, 'res')
 
-// &2 
+// &2 using same array as input
 const reverseAnArrUsingRecursion = (arr, start, end) => {
   if (start > end) {
     return
@@ -103,7 +103,6 @@ const reverseAnArrUsingRecursion = (arr, start, end) => {
     arr[end] = temp
     reverseAnArrUsingRecursion(arr, ++start, --end)
   }
-  console.log(arr, 'arr')
 }
 
 const arr = [1, 2, 3, 4, 5]
