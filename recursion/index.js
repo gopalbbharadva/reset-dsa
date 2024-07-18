@@ -94,16 +94,80 @@
 // console.log(res, 'res')
 
 // &2 using same array as input
-const reverseAnArrUsingRecursion = (arr, start, end) => {
-  if (start > end) {
-    return
-  } else {
-    const temp = arr[start]
-    arr[start] = arr[end]
-    arr[end] = temp
-    reverseAnArrUsingRecursion(arr, ++start, --end)
-  }
-}
+// const reverseAnArrUsingRecursion = (arr, start, end) => {
+//   if (start > end) {
+//     return
+//   } else {
+//     const temp = arr[start]
+//     arr[start] = arr[end]
+//     arr[end] = temp
+//     reverseAnArrUsingRecursion(arr, ++start, --end)
+//   }
+// }
 
-const arr = [1, 2, 3, 4, 5]
-reverseAnArrUsingRecursion(arr, 0, arr.length - 1)
+// const arr = [1, 2, 3, 4, 5]
+// reverseAnArrUsingRecursion(arr, 0, arr.length - 1)
+
+// !! 6. Check if the given String is Palindrome or not
+
+// &1. Brute-force : Palindrome string check
+// const palindromeString = (str) => {
+//   let str2 = []
+//   for (let i = str.length; i >= 0; i--) {
+//     str2[i] = str[i]
+//   }
+//   str2 = str2.join('')
+//   if (str2 === str) {
+//     return "It's a palindrome string"
+//   }
+//   return 'Not palindrome string'
+// }
+
+// const str = palindromeString('abcdcba')
+// console.log(str, 'str')
+
+// &2. Two pointer : Palindrome string check
+// const palindromeCheckTwoPointer = (str) => {
+//   let i = 0,
+//     j = str.length - 1
+//   let flag = false
+
+//   while (i < j) {
+//     if (str[i] === str[j]) {
+//       i++
+//       j--
+//       flag = true
+//     }
+//     break
+//   }
+//   return flag
+// }
+
+// const res = palindromeCheckTwoPointer('abcdcba')
+// console.log(res, 'res')
+
+// &3. Recursion : Palindrome string check
+// const alphaNumeric = (char) => {
+//   const regex = /^[a-z]+$/
+//   const temp = regex.test(char)
+//   return temp
+// }
+
+// const recursionPalindrome = (str, i, j, flag) => {
+//   if (i > j) {
+//     return flag
+//   } else {
+//     if (!alphaNumeric(str[i])) {
+//       return recursionPalindrome(str, ++i, j, flag)
+//     } else if (!alphaNumeric(str[j])) {
+//       return recursionPalindrome(str, i, --j, flag)
+//     } else if (str[i].toLowerCase() !== str[j].toLowerCase()) {
+//       flag = false
+//       return flag
+//     } else {
+//       return recursionPalindrome(str, ++i, --j, flag)
+//     }
+//   }
+// }
+// const s1 = 'A man, a plan, a canal: Panama'
+// const res = recursionPalindrome(s1, 0, s1.length - 1, false)
