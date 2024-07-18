@@ -174,7 +174,7 @@
 
 // !! 7. Check if the given String is Palindrome or not
 
-// Brute-force approach
+// && 1. Brute-force approach
 // const fibonacci = (num) => {
 //   let n1 = 0,
 //     n2 = 1,
@@ -191,3 +191,29 @@
 // }
 
 // fibonacci(5)
+
+// && 2. Fibonacci series using recursion
+// One approach
+// const recursionUsingFibonacci = (num1, num2, n) => {
+//   if (num2 >= n) {
+//     return num2
+//   } else {
+//     console.log(num2)
+//     return recursionUsingFibonacci(num2, num2 + num1, n)
+//   }
+// }
+
+// const res = recursionUsingFibonacci(0, 1, 25)
+// console.log(res, 'res')
+
+// Second approach
+// const recursionUsingFibonacci = (num) => {
+//   if (num <= 1) {
+//     return num
+//   } else {
+//     return recursionUsingFibonacci(num - 2) + recursionUsingFibonacci(num - 1)
+//   }
+// }
+
+// const res = recursionUsingFibonacci(5)
+// console.log(res, 'res')
