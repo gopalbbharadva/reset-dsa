@@ -171,3 +171,23 @@
 // }
 // const s1 = 'A man, a plan, a canal: Panama'
 // const res = recursionPalindrome(s1, 0, s1.length - 1, false)
+
+// !! 7. Check if the given String is Palindrome or not
+
+// Brute-force approach
+// const fibonacci = (num) => {
+//   let n1 = 0,
+//     n2 = 1,
+//     n3 = n1 + n2
+//   console.log(n1)
+//   console.log(n2)
+//   console.log(n3)
+//   while (n3 < num) {
+//     n1 = n2
+//     n2 = n3
+//     n3 = n1 + n2
+//     console.log(n3)
+//   }
+// }
+
+// fibonacci(5)
