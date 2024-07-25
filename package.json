@@ -1,9 +1,9 @@
 {
   "name": "reset-dsa",
   "version": "1.0.0",
-  "main": "recursion/index.js",
+  "main": "hashing/basicHashing.js",
   "scripts": {
-    "start": "nodemon recursion/index.js",
+    "start": "nodemon hshing/basicHashing.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
