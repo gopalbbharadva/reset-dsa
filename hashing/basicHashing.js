@@ -28,7 +28,7 @@
 
 // !! 1. Find the highest/lowest frequency element
 
-// Better approach
+// && 1. Better approach
 // const highFrequencyElement = (arr) => {
 //   const max = Math.max(...arr)
 //   let maxFrequentNumber = 0
@@ -66,3 +66,27 @@
 
 // const res = lowFrequencyElement([0, 0, 1, 2, 2, 3, 1])
 // console.log(res, 'res')
+
+// && 2. Using map data structure.
+// Find the highest/lowest frequency element
+
+const findHighFrequencyElement = (arr) => {
+  const map = new Map()
+  let max = arr[0]
+  for (let i = 0; i < arr.length; i++) {
+    if (map.get(arr[i])) {
+      map.set(arr[i], map.get(arr[i]) + 1)
+    } else {
+      map.set(arr[i], 1)
+    }
+  }
+  for (let [key] of map) {
+    if (map.get(key) > map.get(max)) {
+      max = key
+    }
+  }
+  return max
+}
+
+const res = findHighFrequencyElement([10, 12, 10, 15, 10, 15])
+console.log(res, 'res')
